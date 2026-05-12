@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: jobtracker
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jobtracker
+    username: postgres
+    password: password123
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      connection-init-sql: SET TIME ZONE 'Asia/Kolkata'
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+
+server:
+  port: 8080
